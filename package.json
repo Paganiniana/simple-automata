@@ -1,0 +1,25 @@
+{
+  "name": "simple-automata",
+  "version": "0.0.1",
+  "description": "A JS/HTML/Canvas implementation of simple Cellular Automata.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paganiniana/simple-automata.git"
+  },
+  "keywords": [
+    "cellular",
+    "automata",
+    "javascript",
+    "canvas"
+  ],
+  "author": "Philip Grabenhorst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Paganiniana/simple-automata/issues"
+  },
+  "homepage": "https://github.com/Paganiniana/simple-automata#readme"
+}
