@@ -1,6 +1,6 @@
 
 /**
- * @description 
+ * @
  */
 class Game {
     ents = []
@@ -9,15 +9,35 @@ class Game {
      * 
      * @param {number} w 
      * @param {number} h 
-     * @param {Array} start 
+     * @param {Array} start a place to start from, must be of length w
      * @param {number} ruleset 8-bit number format, such that 0 <= rules <= 255
      */
     constructor(w, h, start, ruleset) {
+        // check length of start
+        if (start.length != w) {
+            throw new Error(`Incompatible seed: the array 'start' must be of the same length as the width, ${w}. You provided an array of length ${start.length}`)
+        }
+
+        // ensure ruleset is valid
+        if (typeof ruleset != 'number' || (ruleset < 0 || ruleset > 255)) {
+            throw new Error("Incompatible ruleset. The ruleset must be an integer r, such that 0 <= r <= 255")
+        }
+
+        // ensure width and height values
+
+        if (typeof w != 'number' || w < 0) {
+            throw new Error(`Incompatible width ${w}. Width must be a number w, such that 0 < w.`)
+        }
+        if (typeof h != 'number' || h < 0) {
+            throw new Error(`Incompatible height ${h}. Width must be a number h, such that 0 < h.`)
+        }
+
+        
         // set instance variables
         this.w = w
         this.h = h
-        
-        // store ruleset as string
+
+        // store ruleset as a string of binary
         this.ruleset = (ruleset).toString(2).padStart(8, '0')
         
         // create the starting point
