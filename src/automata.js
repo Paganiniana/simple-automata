@@ -5,11 +5,14 @@ class Automata {
      * @param {object} options {width, height, start_row, rule}
      */
     constructor(target_id, options) {
-        // get target element
+        // get target element and create canvas
         let target_container = document.getElementById(target_id)
+        target_container.innerHTML = '' // clear contents
+        let target_elem = document.createElement('canvas')
+        target_container.appendChild(target_elem)
 
         // create game and board
-        let game = new Game(options.width, options.height, options.start_row, options.rule)
-        let board = new Board(game, target_container)
+        this.game = new Game(options.width, options.height, options.start_row, options.rule)
+        this.board = new Board(this.game, target_elem)
     }
 }
