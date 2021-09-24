@@ -54,9 +54,15 @@ class Game {
         }
     }
 
+    /**
+     * @description use the existing rows to generate a new row.
+     */
     generateNextRow() {
         let last_r = this.ents[this.ents.length -1]
         let new_r = new Array(this.w).fill(0)
+        // We on the value of a new entity by evaluating its neighboring parents.
+        // the parents together make up a rule index (ri) such that 0 <= ri < 8
+        // is used to select the value of the ruleset to apply
         for (let i = 0; i < this.w; i++) {
             let parent_left
             let parent_mid
