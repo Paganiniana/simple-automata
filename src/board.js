@@ -38,17 +38,10 @@ class Board {
      * @description used once, listens for changes to the viewport width and repaints the canvas ONLY if it has changed sizes
      */
     setResizeListener() {
-        document.addEventListener('resize', () => {
+        window.addEventListener('resize', () => {
             this.setCanvasSize()
-            // only refresh if the canvas has changed size
-            if (this.canvas_height !== this.canvas.height || this.canvas_width != this.canvas.width) {
-                // replace instance variables
-                this.canvas_width = this.canvas.width
-                this.canvas_height = this.canvas.height
-
-                // refresh
-                this.refresh()
-            }
+            this.refresh()
+            // TODO only refresh if the canvas has changed size
         })
     }
 
@@ -66,6 +59,7 @@ class Board {
      * @description Uses this.canvas_width and this.canvas_height to paint Game onto the canvas when (1) the game is updated or (2) the canvas changes width
      */
     refresh() {
+        console.log('refreshing')
         // setup context & color
         let ctx = this.canvas.getContext('2d')
         ctx.fillStyle = this.ent_color
