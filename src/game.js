@@ -86,7 +86,7 @@ class Game {
     }
 
     getRow(n) {
-
+        return this.ents[n]
     }
 
     getWidth() {
