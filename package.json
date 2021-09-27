@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Paganiniana/simple-automata/issues"
   },
-  "homepage": "https://github.com/Paganiniana/simple-automata#readme"
+  "homepage": "https://github.com/Paganiniana/simple-automata#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
