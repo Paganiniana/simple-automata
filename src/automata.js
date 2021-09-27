@@ -39,6 +39,7 @@ class Automata {
     }
 
     getRandomRow(width, density) {
+        // density is a percentage, expressed as a decimal
         if (density > 1 || density < 0) {
             throw new Error('The value density must be a decimal value d such that 0 < d < 1')
         }
