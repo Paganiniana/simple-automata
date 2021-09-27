@@ -1,0 +1,11 @@
+{
+    "browserSyncOptions": {
+        "server": true,
+		"notify": false,
+		"files": ["./dist/**/*.js", "./**/*.html"]
+	},
+    "paths": {
+        "dev": "./src",
+        "dist": "./dist"
+    }
+}
