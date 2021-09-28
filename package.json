@@ -2,6 +2,7 @@
   "name": "simple-automata",
   "version": "0.0.1",
   "description": "A JS/HTML/Canvas implementation of simple Cellular Automata.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
