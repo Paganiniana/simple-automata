@@ -1,3 +1,6 @@
+import Board from './board.js';
+import Game from './game.js';
+
 class Automata {
     /**
      * 
@@ -58,3 +61,5 @@ class Automata {
         return row
     }
 }
+
+export default Automata;

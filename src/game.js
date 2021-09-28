@@ -103,3 +103,5 @@ class Game {
         return this.h
     }
 }
+
+export default Game;
