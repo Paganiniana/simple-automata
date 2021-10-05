@@ -1,6 +1,6 @@
 {
   "name": "simple-automata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JS/HTML/Canvas implementation of simple Cellular Automata.",
   "type": "module",
   "main": "dist/cjs/index.js",
