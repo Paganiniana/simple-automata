@@ -9,7 +9,7 @@ This library should run anywhere you can run JavaScript. More specifically, if y
 *Direct Injection (CDN)*
 
 ```
-<script src = "https://cdn.jsdelivr.net/npm/simple-automata@latest/dist/index.min.js"/>
+<script src = "https://cdn.jsdelivr.net/npm/simple-automata@latest/dist/cdn/index.js"/>
 ```
 
 *NPM*
