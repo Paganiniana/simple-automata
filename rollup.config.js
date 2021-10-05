@@ -35,7 +35,7 @@ cjs_options.output = {
 // Vanilla JS variant (used for CDNS)
 let iife_options = {... default_options}
 iife_options.output = {
-    name: "YOUR_NAME", // TODO: automatically generate?
+    name: "Automata", // TODO: automatically generate?
     file: "./dist/cdn/index.js",
     format: "iife",
     plugins: [
