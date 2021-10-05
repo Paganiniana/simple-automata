@@ -3,7 +3,6 @@
  * @
  */
 class Game {
-    ents = []
 
     /**
      * 
@@ -13,6 +12,9 @@ class Game {
      * @param {number} ruleset 8-bit number format, such that 0 <= rules <= 255
      */
     constructor(w, h, start, ruleset) {
+        // initialize ents list 
+        this.ents = []
+        
         // check length of start
         if (start.length != w) {
             throw new Error(`Incompatible seed: the array 'start' must be of the same length as the width, ${w}. You provided an array of length ${start.length}`)

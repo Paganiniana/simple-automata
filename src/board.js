@@ -1,14 +1,13 @@
 class Board {
-    canvas_width
-    canvas_height
-    ent_color = "rgba(0, 0, 0, 1)"
-
     /**
      * 
      * @param {Game} game 
      * @param {HTMLCanvasElement} canvas 
      */
     constructor(game, canvas) { // TODO: Add options for variably sized display
+        // initialize entity color
+        ent_color = "rgba(0, 0, 0, 1)"
+
         // store game and canvas
         this.game = game
         this.canvas = canvas
