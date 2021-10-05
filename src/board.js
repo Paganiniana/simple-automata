@@ -6,7 +6,7 @@ class Board {
      */
     constructor(game, canvas) { // TODO: Add options for variably sized display
         // initialize entity color
-        ent_color = "rgba(0, 0, 0, 1)"
+        this.ent_color = "rgba(0, 0, 0, 1)"
 
         // store game and canvas
         this.game = game
