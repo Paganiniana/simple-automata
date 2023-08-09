@@ -1,6 +1,8 @@
 # Simple Automata
 
-*Simple Automata* is a library for creating simple cellular automata anywhere you can run JavaScript. It supports a two dimensional environment where each block (or "cell") is an automata. Going from top to bottom, each row is generated based on the state of the previous row. Using this library, you have a choice of 256 different rules and various starting conditions. 
+[Try it out, here.](https://simple-automata-mod.web.app/)
+
+*Simple Automata* is a library for creating simple cellular automata, using the same ruleset from Stephen Wolframs [A New Kind of Science](https://www.wolframscience.com/nks/). It supports a two dimensional environment where each block (or "cell") is an automata. Going from top to bottom, each row is generated based on the state of the previous row. Using this library, you have a choice of 256 different rules and various starting conditions. 
 
 ## Installation
 
@@ -14,7 +16,7 @@ This library should run anywhere you can run JavaScript. More specifically, if y
 
 *NPM*
 
-```
+```bash
 npm install --save simple-automata
 ```
 
@@ -22,27 +24,27 @@ npm install --save simple-automata
 
 To create an automata, just specify the *id* of the element you want it to appear in, the type of start condition, the rule you want to use, and any necessary options. Note: an instance of the *Automata* class will fill to fit the size of its container. Therefore, you should style the container's CSS appropriately.
 
-```
-// in an NPM environment ...
+```js
+// in an ES6 environment ...
 import Automata from 'simple-automata';
 
 // ... then when you have it available
 
 let auto = new Automata(
-    my_container_id, 
-    rule_type, 
-    rule_num,
-    options
+    my_container_id, // string
+    rule_type,  // string, 'simple' | 'random'
+    rule_num, // number, 0-255
+    options // object
 )
 ```
 
 ## Options
 
-As stated above, the *Automata* class gives you many options. The most important ones have to do with the starting condition. All options objects require a height and a width, like so.
+The most important options have to do with the starting condition. All options objects require a height and a width (in blocks), like so.
 
-```
+```js
 let auto = new Automata(
-    'test-id', 
+    'test-id',
     'simple', 
     30, 
     {
@@ -51,9 +53,9 @@ let auto = new Automata(
 })
 ```
 
-However, if you decide to live on the wild side and opt for a 'random' starting condition, like so, you have to include a *density* property in your options object.
+On the wild side, you can opt for a 'random' starting condition. you have to include a *density* property in your options object.
 
-```
+```js
 let auto = new Automata(
     'test-id', 
     'random', 
